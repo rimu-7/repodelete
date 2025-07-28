@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-primary: #212121; /* default: dark text on light bg */
+  --color-secondary: #ffffff;
+}
+
+.dark {
+  --color-primary: #ffffff; /* light text on dark bg */
+  --color-secondary: #212121;
+}
+
+body {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
