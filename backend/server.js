@@ -49,7 +49,7 @@ app.use(rateLimit({
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
-  callbackURL: `http://localhost:${PORT}/auth/github/callback`,
+  callbackURL: `https://repodelete.vercel.app/auth/github/callback`,
 }, (accessToken, refreshToken, profile, done) => {
   userTokens.set(profile.id, accessToken);
   return done(null, {
