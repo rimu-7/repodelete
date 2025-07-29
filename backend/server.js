@@ -11,7 +11,7 @@ const rateLimit = require("express-rate-limit");
 
 const app = express();
 const PORT = 4500;
-const backend_url = process.env.BACKEND_URL || 'https://repodelete.vercel.app';
+const backend_url = 'https://repodelete.vercel.app';
 
 // Define frontend URL as a constant
 const FRONTEND_URL =process.env.FRONTEND_URL|| "http://localhost:5173";
