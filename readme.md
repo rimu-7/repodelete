@@ -2,8 +2,8 @@
 
 A modern web application for managing your GitHub repositories with enhanced UI/UX and additional functionality.
 
-![App Screenshot](./image-1.png) *(Replace with actual screenshot path)*
-![App Screenshot](./image-2.png) *(Replace with actual screenshot path)*
+![App Screenshot](./image-1.png) *(HomePage)*
+![App Screenshot](./image-2.png) *(Repositories)*
 
 ## Features
 

@@ -11,9 +11,10 @@ const rateLimit = require("express-rate-limit");
 
 const app = express();
 const PORT = 4500;
+const backend_url = process.env.BACKEND_URL || 'https://repodelete.vercel.app';
 
 // Define frontend URL as a constant
-const FRONTEND_URL = "http://localhost:5173";
+const FRONTEND_URL =process.env.FRONTEND_URL|| "http://localhost:5173";
 
 let userTokens = new Map();
 
@@ -25,7 +26,7 @@ app.use(cors({
 }));
 
 app.use(session({
-  secret: process.env.SESSION_SECRET || "your-secret",
+  secret: process.env.SESSION_SECRET || "92b3ebae7a0e98b3f55eb777e02fe1e622b640c5c26d261946430090a2caa754",
   resave: false,
   saveUninitialized: false,
   cookie: {
@@ -49,7 +50,7 @@ app.use(rateLimit({
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
-  callbackURL: `https://repodelete.vercel.app/auth/github/callback`,
+  callbackURL: `${backend_url}/auth/github/callback`,
 }, (accessToken, refreshToken, profile, done) => {
   userTokens.set(profile.id, accessToken);
   return done(null, {
