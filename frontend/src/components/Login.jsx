@@ -6,7 +6,7 @@ const Login = ({ user }) => {
           Go to Dashboard
         </a>
       ) : (
-        <a href={`http://localhost:4500/auth/github`}>
+        <a href={`https://repodelete.vercel.app/auth/github`}>
           <button className="bg-black text-white px-6 py-3 rounded-lg shadow hover:bg-gray-900 transition">
             Login with GitHub
           </button>

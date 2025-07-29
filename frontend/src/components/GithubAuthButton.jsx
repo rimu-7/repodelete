@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const GitHubAuthButton = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [loading, setLoading] = useState(true);
-    const BACKEND_URL = "http://localhost:4500";
+    const BACKEND_URL = "https://repodelete.vercel.app";
     const isProduction = import.meta.env.VITE_ENV === 'production';
 
     useEffect(() => {

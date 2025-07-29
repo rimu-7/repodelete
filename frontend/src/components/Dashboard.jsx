@@ -16,7 +16,7 @@ const Dashboard = ({ user }) => {
   const [selected, setSelected] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isDeleting, setIsDeleting] = useState(false);
-  const BACKEND_URL = import.meta.env.VITE_API_URL;
+  const BACKEND_URL = 'https://repodelete.vercel.app';
 
   useEffect(() => {
     console.log("User object:", user); // Debug
